@@ -16,18 +16,18 @@ class HomeView extends StatelessWidget {
         onPressed: ()
          {
 showModalBottomSheet(
-  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
+  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
   backgroundColor: Colors.amber,
   context: context,
    builder: (context) {
-     return showModalSheet();
+     return ShowModalSheet();
    },
    );
          },
       ),
       body: Column(
         children: [
-          CustomAppBar(),
+          CustomAppBar(icon: Icons.search, text: 'Notes',),
           Expanded(
             child: ListView.separated(
               separatorBuilder: (context, index) {

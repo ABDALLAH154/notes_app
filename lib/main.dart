@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import 'package:hive_flutter/adapters.dart';
 import 'package:notes_app/views/home_view.dart';
 
 void main() {
