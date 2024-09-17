@@ -1,0 +1,1 @@
+const kBox = 'note';

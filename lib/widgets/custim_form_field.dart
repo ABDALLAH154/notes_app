@@ -5,12 +5,14 @@ class CustomFormField extends StatelessWidget {
     super.key,
      required this.text,
       required this.maxLines,
+       this.onSaved,
+       
    
  
   
     
   });
-
+final void Function(String?)? onSaved;
 final String text;
 final int maxLines;
 // final bool autofocus;
@@ -18,7 +20,17 @@ final int maxLines;
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+      onSaved: onSaved,
+      validator:(value) {
+        if(value?.isEmpty  ?? true )
+        {
+          return 'there is an error';
+        }else
+        {
+          return null;
+        }
+      } ,
       maxLines: maxLines,
       decoration: InputDecoration(
         hintText:text ,

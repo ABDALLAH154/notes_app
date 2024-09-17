@@ -12,7 +12,7 @@ final VoidCallback? onPressed;
     return Container(
       
       height: 50,
-      width: double.infinity,
+      width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         color: Colors.white
       ),

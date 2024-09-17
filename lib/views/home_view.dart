@@ -4,9 +4,14 @@ import 'package:notes_app/widgets/custom_new_item.dart';
 import 'package:notes_app/widgets/custom_search.dart';
 import 'package:notes_app/widgets/show_modal_sheet.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends StatefulWidget {
   const HomeView({super.key});
 
+  @override
+  State<HomeView> createState() => _HomeViewState();
+}
+
+class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,14 +20,14 @@ class HomeView extends StatelessWidget {
         child: Icon(Icons.add),
         onPressed: ()
          {
-showModalBottomSheet(
-  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-  backgroundColor: Colors.amber,
-  context: context,
-   builder: (context) {
+    showModalBottomSheet(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      backgroundColor: Colors.amber,
+      context: context,
+       builder: (context) {
      return ShowModalSheet();
-   },
-   );
+       },
+       );
          },
       ),
       body: Column(
